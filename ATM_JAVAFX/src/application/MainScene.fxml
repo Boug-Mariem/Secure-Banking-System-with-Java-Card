@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="background" prefHeight="633.0" prefWidth="956.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainSceneController">
+   <children>
+      <AnchorPane id="welcome" fx:id="welcome" layoutX="2.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="956.0">
+         <children>
+            <!-- TextFlow with Anchors -->
+            <TextFlow layoutX="191.0" layoutY="69.0" AnchorPane.leftAnchor="191.0" AnchorPane.topAnchor="69.0">
+               <Text style="-fx-fill: white; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="Welcome To " />
+               <Text style="-fx-fill: #74a026; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="Our Bank" />
+            </TextFlow>
+            <ImageView fitHeight="150.0" fitWidth="198.0" layoutX="778.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/bank.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="224.0" fitWidth="440.0" layoutX="279.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/insert.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="insert_btn" fitHeight="112.0" fitWidth="319.0" layoutX="329.0" layoutY="220.0" onMouseEntered="#changerInsertB1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/insert_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="insert_btn2" fitHeight="112.0" fitWidth="319.0" layoutX="329.0" layoutY="220.0" onMouseClicked="#ouvrirPinVide" onMouseExited="#changerInsertB2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/insert_btn2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="enterpinVide" fx:id="enterpinVide" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="956.0" visible="false">
+         <children>
+            <ImageView fx:id="password_0" fitHeight="150.0" fitWidth="267.0" layoutX="381.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/password_0.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="198.0" layoutX="778.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/bank.png" />
+               </image>
+            </ImageView>
+            <TextFlow layoutX="290.0" layoutY="70.0">
+               <children>
+                  <Text style="-fx-fill: white; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="ENTER " />
+                  <Text style="-fx-fill: #74a026; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="Your Pin" />
+               </children>
+            </TextFlow>
+<!-- 
+            <ImageView fx:id="btn_1" fitHeight="150.0" fitWidth="200.0" layoutX="319.0" layoutY="285.0" onMouseClicked="#taper1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_2" fitHeight="150.0" fitWidth="200.0" layoutX="414.0" layoutY="285.0" onMouseClicked="#taper2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_3" fitHeight="150.0" fitWidth="200.0" layoutX="508.0" layoutY="285.0" onMouseClicked="#taper3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_0" fitHeight="150.0" fitWidth="200.0" layoutX="414.0" layoutY="500.0" onMouseClicked="#taper0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/0.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_4" fitHeight="150.0" fitWidth="200.0" layoutX="319.0" layoutY="354.0" onMouseClicked="#taper4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_5" fitHeight="150.0" fitWidth="200.0" layoutX="414.0" layoutY="354.0" onMouseClicked="#taper5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/5.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_6" fitHeight="150.0" fitWidth="200.0" layoutX="508.0" layoutY="354.0" onMouseClicked="#taper6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/6.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_7" fitHeight="150.0" fitWidth="200.0" layoutX="319.0" layoutY="427.0" onMouseClicked="#taper7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/7.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_8" fitHeight="150.0" fitWidth="200.0" layoutX="414.0" layoutY="427.0" onMouseClicked="#taper8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/8.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_9" fitHeight="150.0" fitWidth="200.0" layoutX="508.0" layoutY="427.0" onMouseClicked="#taper9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/9.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="clear_btn" fitHeight="150.0" fitWidth="200.0" layoutX="319.0" layoutY="500.0" onMouseClicked="#taperC" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/clear.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="run_btn" fitHeight="150.0" fitWidth="200.0" layoutX="508.0" layoutY="500.0" onMouseClicked="#play" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/run.png" />
+               </image>
+            </ImageView>
+-->
+            <ImageView fx:id="password_3" fitHeight="150.0" fitWidth="600.0" layoutX="381.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/password_3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="password_2" fitHeight="150.0" fitWidth="600.0" layoutX="381.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/password_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="password_1" fitHeight="150.0" fitWidth="600.0" layoutX="381.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/password_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="password_4" fitHeight="150.0" fitWidth="600.0" layoutX="381.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/password_4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="143.0" fitWidth="265.0" layoutX="-20.0" layoutY="468.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/decoration_pin.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero1" fitHeight="60.0" fitWidth="65.0" layoutX="400.0" layoutY="327.0" onMouseClicked="#taper1" onMouseEntered="#changer11" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero2" fitHeight="60.0" fitWidth="65.0" layoutX="484.0" layoutY="326.0" onMouseClicked="#taper2" onMouseEntered="#changer21" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero3" fitHeight="60.0" fitWidth="65.0" layoutX="571.0" layoutY="326.0" onMouseClicked="#taper3" onMouseEntered="#changer31" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero4" fitHeight="60.0" fitWidth="65.0" layoutX="400.0" layoutY="397.0" onMouseClicked="#taper4" onMouseEntered="#changer41" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero5" fitHeight="60.0" fitWidth="65.0" layoutX="484.0" layoutY="397.0" onMouseClicked="#taper5" onMouseEntered="#changer51" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/5.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero6" fitHeight="60.0" fitWidth="65.0" layoutX="571.0" layoutY="397.0" onMouseClicked="#taper6" onMouseEntered="#changer61" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/6.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero7" fitHeight="60.0" fitWidth="65.0" layoutX="400.0" layoutY="468.0" onMouseClicked="#taper7" onMouseEntered="#changer71" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/7.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero8" fitHeight="60.0" fitWidth="65.0" layoutX="484.0" layoutY="468.0" onMouseClicked="#taper8" onMouseEntered="#changer81" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/8.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero9" fitHeight="60.0" fitWidth="65.0" layoutX="571.0" layoutY="468.0" onMouseClicked="#taper9" onMouseEntered="#changer91" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/9.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero0" fitHeight="60.0" fitWidth="65.0" layoutX="484.0" layoutY="540.0" onMouseClicked="#taper0" onMouseEntered="#changer01" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/0.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="play1" fitHeight="60.0" fitWidth="65.0" layoutX="571.0" layoutY="540.0" onMouseEntered="#changerPlay1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/run.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c1" fitHeight="60.0" fitWidth="65.0" layoutX="400.0" layoutY="540.0" onMouseClicked="#taperC" onMouseEntered="#changerC1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/clear.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero02" fitHeight="60.0" fitWidth="200.0" layoutX="484.0" layoutY="540.0" onMouseClicked="#taper0" onMouseExited="#changer02" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/0_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero12" fitHeight="60.0" fitWidth="200.0" layoutX="400.0" layoutY="326.0" onMouseClicked="#taper1" onMouseExited="#changer12" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/1_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero22" fitHeight="60.0" fitWidth="200.0" layoutX="484.0" layoutY="326.0" onMouseClicked="#taper2" onMouseExited="#changer22" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/2_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero32" fitHeight="60.0" fitWidth="200.0" layoutX="571.0" layoutY="326.0" onMouseClicked="#taper3" onMouseExited="#changer32" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/3_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero42" fitHeight="60.0" fitWidth="200.0" layoutX="400.0" layoutY="397.0" onMouseClicked="#taper4" onMouseExited="#changer42" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/4_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero52" fitHeight="60.0" fitWidth="200.0" layoutX="484.0" layoutY="397.0" onMouseClicked="#taper5" onMouseExited="#changer52" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/5_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero62" fitHeight="60.0" fitWidth="200.0" layoutX="571.0" layoutY="397.0" onMouseClicked="#taper6" onMouseExited="#changer62" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/6_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero72" fitHeight="60.0" fitWidth="200.0" layoutX="400.0" layoutY="468.0" onMouseClicked="#taper7" onMouseExited="#changer72" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/7_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero82" fitHeight="60.0" fitWidth="200.0" layoutX="484.0" layoutY="468.0" onMouseClicked="#taper8" onMouseExited="#changer82" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/8_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bnumero92" fitHeight="60.0" fitWidth="200.0" layoutX="571.0" layoutY="468.0" onMouseClicked="#taper9" onMouseExited="#changer92" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/9_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c2" fitHeight="60.0" fitWidth="200.0" layoutX="400.0" layoutY="540.0" onMouseClicked="#taperC" onMouseExited="#changerC2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/clear_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="play2" fitHeight="60.0" fitWidth="200.0" layoutX="571.0" layoutY="540.0" onMouseClicked="#play" onMouseExited="#changerPlay2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/run_2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="btn_1" />
+            <String fx:value="btn_1" />
+         </styleClass>
+      </AnchorPane>
+
+      <AnchorPane fx:id="accessDenied" onMouseClicked="#DeniedVersWelcome" prefHeight="633.0" prefWidth="956.0" visible="false">
+
+         <children>
+            <ImageView fitHeight="150.0" layoutX="778.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="473.20000000000005" AnchorPane.leftAnchor="780.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@images/bank.png" />
+               </image>
+            </ImageView>
+            <TextFlow layoutX="290.0" layoutY="70.0" prefHeight="72.0" prefWidth="378.0">
+               <children>
+                  <Text style="-fx-fill: white; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="ACCESS " textAlignment="CENTER" wrappingWidth="168.62002563476562" />
+                  <Text style="-fx-fill: #dd202b; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="DENIED" wrappingWidth="207.57998657226562" />
+               </children>
+            </TextFlow>
+            <ImageView fitHeight="395.0" fitWidth="344.0" layoutX="306.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/access_denied.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="menu" fx:id="menu" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="956.0" visible="false">
+         <children>
+            <Text layoutX="412.0" layoutY="128.0" style="-fx-fill: #ffa900; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="menu" />
+            <ImageView fitHeight="150.0" fitWidth="198.0" layoutX="778.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/bank.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="summary_btn" fitHeight="150.0" fitWidth="250.0" layoutX="353.0" layoutY="466.0" onMouseEntered="#changerSummarybtn1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/summary_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="withdraw_btn" fitHeight="150.0" fitWidth="250.0" layoutX="603.0" layoutY="331.0" onMouseEntered="#changerRetaitbtn1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/withdraw_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="deposit_btn" fitHeight="150.0" fitWidth="250.0" layoutX="103.0" layoutY="331.0" onMouseEntered="#changerDepositbtn1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/deposit_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="balance_btn" fitHeight="150.0" fitWidth="250.0" layoutX="353.0" layoutY="190.0" onMouseEntered="#changerBalancebtn1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/balance_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView id="eject_btn" fx:id="eject_btn" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="537.0" onMouseEntered="#changerInsert1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/eject_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="deposit_btn2" fitHeight="150.0" fitWidth="250.0" layoutX="103.0" layoutY="331.0" onMouseClicked="#ovrirdepot" onMouseExited="#changerDepositbtn2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/deposit_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="balance_btn2" fitHeight="150.0" fitWidth="250.0" layoutX="353.0" layoutY="190.0" onMouseClicked="#ovrirbalance" onMouseExited="#changerBalancebtn2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/balance_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="withdraw_btn2" fitHeight="150.0" fitWidth="250.0" layoutX="603.0" layoutY="331.0" onMouseClicked="#ovrirretrait" onMouseExited="#changerRetaitbtn2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/withdraw_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="summary_btn2" fitHeight="150.0" fitWidth="250.0" layoutX="353.0" layoutY="466.0" onMouseClicked="#ovrirsummary" onMouseExited="#changerSummarybtn2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/summary_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView id="eject_btn2" fx:id="eject_btn2" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="537.0" onMouseClicked="#retourVersWelcomeMenu" onMouseExited="#changerInsert2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/eject_btn2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="balance" fx:id="balance" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="956.0" visible="false">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="198.0" layoutX="778.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/bank.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="247.0" layoutY="110.0" style="-fx-fill: #ffa900; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="account balance" />
+<!--  
+            <ImageView fitHeight="200.0" fitWidth="379.0" layoutX="300.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/balance_affiche.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="soldetxt" layoutX="329.0" layoutY="337.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: GAGALIN;" text="Your Balance Will Be Output Here" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="bretourDepuisBalance" fitHeight="72.0" fitWidth="151.0" layoutX="7.0" layoutY="66.0" onMouseClicked="#retourVersMenuBlance" pickOnBounds="true" preserveRatio="true">
+-->
+            <ImageView fx:id="bretourDepuisBalance" fitHeight="60.0" fitWidth="69.0" layoutX="27.0" layoutY="20.0" onMouseClicked="#retourVersMenuBlance" onMouseEntered="#changerRetour1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/previous_btn.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="balance_amount" alignment="CENTER" layoutX="530.0" layoutY="417.0" prefHeight="66.0" prefWidth="160.0" style="-fx-wrap-text: true;" text="10000000" textAlignment="CENTER" wrapText="true" />
+            <ImageView fitHeight="187.0" fitWidth="401.0" layoutX="317.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/balance.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="balance_label" layoutX="207.0" layoutY="418.0" text="your balance:" />
+            <ImageView fx:id="retourwelcomeBalance1" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="537.0" onMouseEntered="#pressBalance1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/eject_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="previous_btn" fitHeight="60.0" fitWidth="69.0" layoutX="27.0" layoutY="20.0" onMouseClicked="#retourVersMenuBlance" onMouseExited="#changerRetour2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/previous_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retourwelcomeBalance2" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="537.0" onMouseClicked="#returnWelcomeBalance" onMouseExited="#pressBalance2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/eject_btn2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="depot" layoutX="2.0" prefHeight="633.0" prefWidth="956.0" visible="false">
+         <children>
+            <Text layoutX="389.0" layoutY="116.0" style="-fx-fill: #ffa900; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="Deposit" />
+            <ImageView fx:id="confirm1" fitHeight="150.0" fitWidth="200.0" layoutX="388.0" layoutY="418.0" onMouseEntered="#changerDepot1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Confirm_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="189.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/deposit_deco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="198.0" layoutX="778.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/bank.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retourDepot_btn" fitHeight="60.0" fitWidth="69.0" layoutX="27.0" layoutY="20.0" onMouseEntered="#changerRetourDepot1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/previous_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retourwelcomeDepot1" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="530.0" onMouseEntered="#pressDepot1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/eject_btn.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="deposit_label" layoutX="281.0" layoutY="297.0" prefHeight="52.0" prefWidth="160.0" text="Amount:" />
+            <TextField fx:id="montantdepose" layoutX="461.0" layoutY="291.0" prefHeight="52.0" prefWidth="254.0" />
+            <ImageView fx:id="confirm2" fitHeight="150.0" fitWidth="200.0" layoutX="388.0" layoutY="418.0" onMouseClicked="#depot" onMouseExited="#changerDepot2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/confirm_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="previousDepot_btn" fitHeight="60.0" fitWidth="69.0" layoutX="27.0" layoutY="20.0" onMouseClicked="#retourDepotMenu" onMouseExited="#changerRetourDepot2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/previous_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retourwelcomeDepot2" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="537.0" onMouseClicked="#returnWelcomeDepot" onMouseExited="#pressDepot2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/eject_btn2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="retrait" layoutX="2.0" layoutY="4.0" prefHeight="633.0" prefWidth="956.0" visible="false">
+         <children>
+            <Text layoutX="360.0" layoutY="113.0" style="-fx-fill: #ffa900; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="withdrawal" />
+            <ImageView fx:id="confirmRetrait1" fitHeight="150.0" fitWidth="200.0" layoutX="388.0" layoutY="419.0" onMouseEntered="#changerRetrait1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Confirm_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="96.0" fitWidth="177.0" layoutX="181.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/withdraw_deco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="198.0" layoutX="778.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/bank.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retourRetrait_btn" fitHeight="60.0" fitWidth="69.0" layoutX="27.0" layoutY="20.0" onMouseEntered="#changerRetourRetrait1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/previous_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retourwelcomeRetrait1" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="537.0" onMouseEntered="#pressRetrait1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/eject_btn.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="withdraw_label" layoutX="280.0" layoutY="297.0" prefHeight="52.0" prefWidth="160.0" text="Amount:" />
+            <TextField fx:id="montantretire" layoutX="461.0" layoutY="291.0" prefHeight="52.0" prefWidth="254.0" />
+            <ImageView fx:id="confirmRetrait2" fitHeight="150.0" fitWidth="200.0" layoutX="388.0" layoutY="419.0" onMouseClicked="#retrait" onMouseExited="#changerRetrait2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/confirm_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="previousRetrait_btn" fitHeight="60.0" fitWidth="69.0" layoutX="27.0" layoutY="20.0" onMouseClicked="#retourRetaitMenu" onMouseExited="#changerRetourRetrait2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/previous_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retourwelcomeRetrait2" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="537.0" onMouseClicked="#returnWelcomeRetrait" onMouseExited="#pressRetrait2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/eject_btn2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="summary" prefHeight="633.0" prefWidth="956.0" visible="false">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="198.0" layoutX="778.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/bank.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="summary_table" layoutX="29.0" layoutY="183.0" prefHeight="338.0" prefWidth="900.0">
+              <columns>
+                <TableColumn fx:id="id_col" prefWidth="300.0" text="ID" />
+                <TableColumn fx:id="id_type" prefWidth="300.0" text="Transaction" />
+                  <TableColumn fx:id="id_montant" prefWidth="300.0" text="Amount" />
+              </columns>
+            </TableView>
+            <Text layoutX="389.0" layoutY="113.0" style="-fx-fill: #ffa900; -fx-font-family: 'Gagalin'; -fx-font-size: 60;" text="SUMMARY" />
+            <ImageView fx:id="print_bn" fitHeight="150.0" fitWidth="200.0" layoutX="407.0" layoutY="542.0" onMouseEntered="#changerPrint1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/print_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="print_bn2" fitHeight="150.0" fitWidth="200.0" layoutX="407.0" layoutY="550.0" onMouseClicked="#Methode_print" onMouseExited="#changerPrint2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/print_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retrunWlcomSum1" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="537.0" onMouseEntered="#changerRetourWS1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/eject_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retrunWlcomSum2" fitHeight="90.0" fitWidth="177.0" layoutX="7.0" layoutY="537.0" onMouseClicked="#RetourWS" onMouseExited="#changerRetourWS2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/eject_btn2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retrunSmmMenu1" fitHeight="60.0" fitWidth="69.0" layoutX="27.0" layoutY="20.0" onMouseEntered="#changerRetourMS1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/previous_btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retrunSmmMenu2" fitHeight="60.0" fitWidth="69.0" layoutX="27.0" layoutY="20.0" onMouseClicked="#RetourMS" onMouseExited="#changerRetourMS2" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/previous_btn2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

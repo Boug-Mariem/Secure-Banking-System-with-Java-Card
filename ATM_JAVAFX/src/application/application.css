@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Gagalin';
+    src: url('fonts/Gagalin-Regular.otf');
+}
+
+#welcome {
+    -fx-font-family: 'Gagalin';
+    -fx-font-size: 60;
+}
+
+#background {
+    -fx-background-image: url("images/Background.png");
+    -fx-background-size: cover; /* Scales the image to fill the pane */
+    -fx-background-repeat: no-repeat; /* Prevents tiling */
+}
+
+
+#bank {
+	-fx-background-image: url("images/bank.png");
+	-fx-background-size: contain; /* or cover, depending on your needs */
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	
+}
+
+#insert_btn {
+    -fx-background-color: #FD7A00;  /* Vibrant orange background */
+    -fx-text-fill: #2F2F2F;         /* Darker grey text */
+    -fx-font-family: 'Montserrat'; /* Use Montserrat font */
+    -fx-font-weight: bold;          /* Make the font bold */
+    -fx-font-size: 26px;            /* Slightly larger font size */
+    -fx-border-radius: 30px;        /* Fully rounded button */
+    -fx-padding: 15px 40px;         /* Balanced padding for a pill shape */
+    -fx-cursor: hand;               /* Hand cursor on hover */
+    -fx-border-color: #FF9E40;      /* Subtle lighter border color */
+    -fx-border-width: 2px;          /* Border thickness */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 2); /* Soft shadow */
+    -fx-alignment: center;          /* Center text in the button */
+    -fx-background-radius: 30px;    /* Match border-radius for smoothness */
+    -fx-transition: all 0.15s ease; /* Faster transitions */
+}
+
+/* Hover effect for the button */
+#insert_btn:hover {
+    -fx-background-color: #FF8C00;  /* Brighter orange for hover */
+    -fx-border-color: #FFD54F;      /* Lightened border color */
+    -fx-text-fill: #000000;         /* Text turns black on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 15, 0.7, 0, 4); /* Enhanced and larger shadow */
+}
+
+.text-field {
+    -fx-font-family: "Gagalin";
+    -fx-font-size: 40px;
+    -fx-alignment: center;
+    -fx-text-fill: #000000; /* Text color */
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e6e6e6); /* Gradient background */
+    -fx-border-color: #cccccc; /* Border color */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 5px; /* Padding inside */
+    -fx-background-radius: 5px; /* Rounded corners for the background */
+    -fx-prompt-text-fill: #aaaaaa; /* Placeholder text color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0.5, 0, 1); /* Shadow effect */
+}
+#balance_label,#balance_amount {
+    -fx-font-family: "Gagalin";
+    -fx-font-size: 40px;
+    -fx-alignment: center;
+    -fx-text-fill: #000000; /* Text color */
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e6e6e6); /* Gradient background */
+    -fx-border-color: #cccccc; /* Border color */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 5px; /* Padding inside */
+    -fx-background-radius: 5px; /* Rounded corners for the background */
+    -fx-border-width: 1px; /* Border width */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0.5, 0, 1); /* Shadow effect */
+    -fx-wrap-text: true;        /* Allow the text to wrap if it's too long */
+
+}
+
+#deposit_label, #withdraw_label{
+	-fx-font-family: "Gagalin";
+    -fx-font-size: 40px;
+    -fx-alignment: center;
+    -fx-text-fill: #ffffff;
+}
+
+.btn_1 {
+    -fx-padding:0.0 
+}
+
+/* TableView Styles */
+
+
+/* Column Header Styling */
+.table-view {
+    -fx-background-color: linear-gradient(to bottom, #f9f9f9, #e6e6e6); /* Subtle gradient for 3D effect */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-radius: 10px;   /* Rounded corners for the border */
+    -fx-background-radius: 10px; /* Match background to border for a seamless look */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 2, 2); /* Soft drop shadow for 3D effect */
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f2f2f2;    /* Light gray background */
+}
+
+.table-view .column-header .label {
+    -fx-font-family: 'Gagalin';       /* Gagalin font for headers */
+    -fx-font-size: 30px;              /* Adjust font size */           /* Center align text */
+    -fx-text-fill: #79bb05;           /* Dark text color */
+}
+
+/* Cell Styling */
+.table-view .cell {
+    -fx-font-family: 'Montserrat';    /* Montserrat font for content */
+    -fx-font-size: 18px;              /* Slightly larger text */
+    -fx-font-weight: bold;            /* Bold text */
+    -fx-alignment: center;            /* Center align text */
+    -fx-text-fill: #444444;           /* Dark gray text color */
+    -fx-background-color: #ffffff;    /* White background */
+}
